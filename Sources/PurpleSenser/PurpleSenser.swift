@@ -13,7 +13,7 @@ public struct PurpleSensor: Decodable {
             public let pm25_1week: Double
             public let time_stamp: Int
 
-            enum CodingKeys: String, CodingKey {
+            public enum CodingKeys: String, CodingKey {
                 case pm25 = "pm2.5"
                 case pm25_10minute = "pm2.5_10minute"
                 case pm25_30minute = "pm2.5_30minute"
@@ -37,6 +37,4 @@ public struct PurpleSensor: Decodable {
     public let time_stamp: Int
     public let data_time_stamp: Int
     public let sensor: Sensor
-    
-    public var text = "Hello, World!"
 }
