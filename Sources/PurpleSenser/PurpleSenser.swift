@@ -1,17 +1,17 @@
 
 import Foundation
 
-struct PurpleSensor: Decodable {
-    struct Sensor: Decodable {
-        struct Stats: Decodable {
-            let pm25: Double
-            let pm25_10minute: Double
-            let pm25_30minute: Double
-            let pm25_60minute: Double
-            let pm25_6hour: Double
-            let pm25_24hour: Double
-            let pm25_1week: Double
-            let time_stamp: Int
+public struct PurpleSensor: Decodable {
+    public struct Sensor: Decodable {
+        public struct Stats: Decodable {
+            public let pm25: Double
+            public let pm25_10minute: Double
+            public let pm25_30minute: Double
+            public let pm25_60minute: Double
+            public let pm25_6hour: Double
+            public let pm25_24hour: Double
+            public let pm25_1week: Double
+            public let time_stamp: Int
 
             enum CodingKeys: String, CodingKey {
                 case pm25 = "pm2.5"
@@ -24,19 +24,19 @@ struct PurpleSensor: Decodable {
                 case time_stamp
             }
         }
-        let sensor_index: Int
-        let last_modified: Int
-        let name: String
-        let icon: Int
-        let humidity: Double
-        let temperature: Double
-        let pressure: Double
-        let stats: Stats
+        public let sensor_index: Int
+        public let last_modified: Int
+        public let name: String
+        public let icon: Int
+        public let humidity: Double
+        public let temperature: Double
+        public let pressure: Double
+        public let stats: Stats
     }
-    let api_version: String
-    let time_stamp: Int
-    let data_time_stamp: Int
-    let sensor: Sensor
+    public let api_version: String
+    public let time_stamp: Int
+    public let data_time_stamp: Int
+    public let sensor: Sensor
     
     public var text = "Hello, World!"
 }
