@@ -8,10 +8,10 @@ public struct PurpleSensor: Decodable {
             public let pm25_10minute: Double
             public let pm25_30minute: Double
             public let pm25_60minute: Double
-            public let pm25_6hour: Double
-            public let pm25_24hour: Double
-            public let pm25_1week: Double
-            public let time_stamp: Int
+            let pm25_6hour: Double
+            let pm25_24hour: Double
+            let pm25_1week: Double
+            let time_stamp: Int
 
             public enum CodingKeys: String, CodingKey {
                 case pm25 = "pm2.5"
