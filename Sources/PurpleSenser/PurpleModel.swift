@@ -32,7 +32,7 @@ public class PurpleModel {
     public var pm25_24hour: AqiBasic!
     public var pm25_1week: AqiBasic!
     
-    init(sensor: PurpleSensor) {
+    public init(sensor: PurpleSensor) {
         self.name = sensor.sensor.name
         self.humidity = String(format: "%.1f﹪", sensor.sensor.humidity)
         self.temp = String(format: "%.1f°F", sensor.sensor.temperature)
