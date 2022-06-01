@@ -10,12 +10,12 @@ import UIKit
 
 
 @objc public class AqiBasic: NSObject {
-    var aqi = "0.0 ug/㎥"
+    public var aqi = "0.0 ug/㎥"
     var aqiD = 0.0
-    var concern = "Good"
-    var desc = "Air quality is satisfactory, and air polution poses little or no risk"
-    var backgroundColor = UIColor.red
-    var textColor = UIColor.white
+    public var concern = "Good"
+    public var desc = "Air quality is satisfactory, and air polution poses little or no risk"
+    public var backgroundColor = UIColor.red
+    public var textColor = UIColor.white
 }
 
 public class PurpleModel {
