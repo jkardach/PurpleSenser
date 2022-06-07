@@ -9,7 +9,6 @@
  */
 
 import Foundation
-import PurpleSenser
 import UIKit
 
 @objc public class PurpleBridge: NSObject, UpdatePurpleDelegate {
