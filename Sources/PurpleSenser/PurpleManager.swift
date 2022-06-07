@@ -8,7 +8,7 @@
 import Foundation
 
 public protocol UpdatePurpleDelegate {
-    func didUpdatePurple(_ purple: PurpleModel)
+    func didUpdatePurple(_ purple: Purple)
     func didFailWithError(_ error: Error)
 }
 
@@ -44,10 +44,9 @@ public class PurpleManager:NSObject {
                 return
             }
             guard let data = data else { return }
-            //let purple = self.parseJSON(data: data)
             if let purple = self.parseJSON(data: data) {
                 let purpleModel = PurpleModel(sensor: purple)
-                self.delegate?.didUpdatePurple(purpleModel)
+                self.delegate?.didUpdatePurple(purpleModel.convertToPurple())
             }
         }
         

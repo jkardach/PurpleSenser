@@ -8,6 +8,44 @@
 import Foundation
 import UIKit
 
+public class Purple: NSObject {
+    @objc public var name = ""
+    @objc public var humidity = ""
+    @objc public var temp = ""
+    @objc public var pressure = ""
+    
+    @objc public var backgroundColor: UIColor = UIColor.white
+    @objc public var textColor: UIColor = UIColor.blue
+    
+    @objc public var aqi = ""
+    @objc public var concern = ""
+    @objc public var desc = ""
+    
+    @objc public var aqi10min = ""
+    @objc public var concern10min = ""
+    @objc public var desc10min = ""
+    
+    @objc public var aqi30min = ""
+    @objc public var concern30min = ""
+    @objc public var desc30min = ""
+    
+    @objc public var aqi60min = ""
+    @objc public var concern60min = ""
+    @objc public var desc60min = ""
+    
+    @objc public var aqi6hr = ""
+    @objc public var concern6hr = ""
+    @objc public var desc6hr = ""
+    
+    @objc public var aqi24hr = ""
+    @objc public var concern24hr = ""
+    @objc public var desc24hr = ""
+    
+    @objc public var aqi1wk = ""
+    @objc public var concern1wk = ""
+    @objc public var desc1wk = ""
+}
+
 
 public class AqiBasic: NSObject {
     public var aqi = "0.0ug/㎥"
@@ -19,18 +57,18 @@ public class AqiBasic: NSObject {
 }
 
 public class PurpleModel {
-    public var name: String = ""
-    public var humidity: String = ""
-    public var temp: String = ""
-    public var pressure: String = ""
+    var name: String = ""
+    var humidity: String = ""
+    var temp: String = ""
+    var pressure: String = ""
     
-    public var pm25: AqiBasic!
-    public var pm25_10minute: AqiBasic!
-    public var pm25_30minute: AqiBasic!
-    public var pm25_60minute: AqiBasic!
-    public var pm25_6hour: AqiBasic!
-    public var pm25_24hour: AqiBasic!
-    public var pm25_1week: AqiBasic!
+    var pm25: AqiBasic!
+    var pm25_10minute: AqiBasic!
+    var pm25_30minute: AqiBasic!
+    var pm25_60minute: AqiBasic!
+    var pm25_6hour: AqiBasic!
+    var pm25_24hour: AqiBasic!
+    var pm25_1week: AqiBasic!
     
     public init(sensor: PurpleSensor) {
         self.name = sensor.sensor.name
@@ -45,6 +83,45 @@ public class PurpleModel {
         self.pm25_6hour = getAqi(pm25: sensor.sensor.stats.pm25_6hour)
         self.pm25_24hour = getAqi(pm25: sensor.sensor.stats.pm25_24hour)
         self.pm25_1week = getAqi(pm25: sensor.sensor.stats.pm25_1week)
+    }
+    
+    @objc public func convertToPurple() -> Purple {
+        let purple = Purple()   // create purple object
+        
+        purple.name = self.name
+        purple.humidity = self.humidity
+        purple.temp = self.temp
+        purple.pressure = self.pressure
+        
+        purple.aqi = self.pm25.aqi
+        purple.concern = self.pm25.concern
+        purple.desc = self.pm25.desc
+        
+        purple.aqi10min = self.pm25_10minute.aqi
+        purple.concern10min = self.pm25_10minute.concern
+        purple.desc10min = self.pm25_10minute.desc
+        
+        purple.aqi30min = self.pm25_30minute.aqi
+        purple.concern30min = self.pm25_30minute.concern
+        purple.desc30min = self.pm25_30minute.desc
+        
+        purple.aqi60min = self.pm25_60minute.aqi
+        purple.concern60min = self.pm25_60minute.concern
+        purple.desc60min = self.pm25_60minute.desc
+        
+        purple.aqi6hr = self.pm25_6hour.aqi
+        purple.concern6hr = self.pm25_6hour.concern
+        purple.desc6hr = self.pm25_6hour.desc
+        
+        purple.aqi24hr = self.pm25_24hour.aqi
+        purple.concern24hr = self.pm25_24hour.concern
+        purple.desc24hr = self.pm25_24hour.desc
+        
+        purple.aqi1wk = self.pm25_1week.aqi
+        purple.concern1wk = self.pm25_1week.concern
+        purple.desc1wk = self.pm25_1week.desc
+        
+        return purple
     }
     
     private func getAqi(pm25: Double) -> AqiBasic {            // createobject

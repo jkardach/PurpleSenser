@@ -1,5 +1,6 @@
 
 import Foundation
+// this object gets filled by the JSON get
 
 public struct PurpleSensor: Decodable {
     struct Sensor: Decodable {
