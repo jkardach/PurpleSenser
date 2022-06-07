@@ -33,7 +33,7 @@ import UIKit
     @objc public var textColor: UIColor = UIColor.blue
     
     
-    public func performRequest() {
+    @objc public func performRequest() {
         purpleManager.delegate = self
         purpleManager.performRequest()
     }
