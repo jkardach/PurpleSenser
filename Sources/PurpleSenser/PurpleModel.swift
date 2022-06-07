@@ -9,8 +9,8 @@ import Foundation
 import UIKit
 
 
-@objc public class AqiBasic: NSObject {
-    public var aqi = "0.0 ug/㎥"
+public class AqiBasic: NSObject {
+    public var aqi = "0.0ug/㎥"
     var aqiD = 0.0
     public var concern = "Good"
     public var desc = "Air quality is satisfactory, and air polution poses little or no risk"
