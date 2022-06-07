@@ -51,7 +51,7 @@ import UIKit
     @objc public var concern1wk = ""
     @objc public var desc1wk = ""
     
-    @objc public func performRequest(_ sensorID: String = "79963") {
+    @objc public func performRequest(sensorID: String) {
         purpleManager.delegate = self
         purpleManager.performRequest(sensorID)
     }
