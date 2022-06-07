@@ -7,7 +7,7 @@
 
 import Foundation
 
-public protocol UpdatePurpleDelegate {
+@objc public protocol UpdatePurpleDelegate {
     func didUpdatePurple(_ purple: Purple)
     func didFailWithError(_ error: Error)
 }
