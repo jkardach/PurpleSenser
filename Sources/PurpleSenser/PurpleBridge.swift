@@ -18,7 +18,7 @@ import UIKit
 }
 
 @objc public class PurpleBridge: NSObject, UpdatePurpleDelegate {
-    public var delegate: UpdatePurpleBridgeDelegate?
+    @objc public var delegate: UpdatePurpleBridgeDelegate?
     private var purpleManager = PurpleManager()
     
     // values to pass back
