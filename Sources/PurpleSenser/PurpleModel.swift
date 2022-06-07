@@ -48,12 +48,12 @@ public class Purple: NSObject {
 
 
 public class AqiBasic: NSObject {
-    public var aqi = "0.0ug/㎥"
+    var aqi = "0.0ug/㎥"
     var aqiD = 0.0
-    public var concern = "Good"
-    public var desc = "Air quality is satisfactory, and air polution poses little or no risk"
-    public var backgroundColor = UIColor.red
-    public var textColor = UIColor.white
+    var concern = "Good"
+    var desc = "Air quality is satisfactory, and air polution poses little or no risk"
+    var backgroundColor = UIColor.red
+    var textColor = UIColor.white
 }
 
 public class PurpleModel {
