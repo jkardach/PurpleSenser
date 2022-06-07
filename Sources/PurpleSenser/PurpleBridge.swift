@@ -12,7 +12,7 @@ import Foundation
 //import PurpleSenser
 import UIKit
 
-public protocol UpdatePurpleBridgeDelegate {
+@objc public protocol UpdatePurpleBridgeDelegate {
     func didUpdatePurpleBridge(_ purple: PurpleBridge)
     func didFailWithError(_ error: Error)
 }
@@ -22,15 +22,15 @@ public protocol UpdatePurpleBridgeDelegate {
     private var purpleManager = PurpleManager()
     
     // values to pass back
-    public var name = ""
-    public var humidity = ""
-    public var temp = ""
-    public var pressure = ""
-    public var aqi = ""
-    public var concern = ""
-    public var desc = ""
-    public var backgroundColor: UIColor = UIColor.white
-    public var textColor: UIColor = UIColor.blue
+    @objc public var name = ""
+    @objc public var humidity = ""
+    @objc public var temp = ""
+    @objc public var pressure = ""
+    @objc public var aqi = ""
+    @objc public var concern = ""
+    @objc public var desc = ""
+    @objc public var backgroundColor: UIColor = UIColor.white
+    @objc public var textColor: UIColor = UIColor.blue
     
     
     public func performRequest() {
