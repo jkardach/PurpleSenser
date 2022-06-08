@@ -14,14 +14,14 @@ import Foundation
 
 // why is this not getting pushed?
 
-public class PurpleManager:NSObject {
+@objc public class PurpleManager:NSObject {
     let urlStr1 = "https://api.purpleair.com/v1/sensors/"
     let urlStr2 = "?api_key=715C9E7B-25EA-11EB-910A-42010A800178"
     
-    public var delegate: UpdatePurpleDelegate?
+    @objc public var delegate: UpdatePurpleDelegate?
     
     
-    public func performRequest(_ sensorID: String = "79963") {
+    @objc public func performRequest(_ sensorID: String = "79963") {
         let url = URL(string: urlStr1 + sensorID + urlStr2)
         guard let requestURL = url else { fatalError() }
         request(url: requestURL)    // call request
