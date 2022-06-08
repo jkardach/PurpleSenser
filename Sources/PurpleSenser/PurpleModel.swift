@@ -92,6 +92,8 @@ public class PurpleModel {
         purple.humidity = self.humidity
         purple.temp = self.temp
         purple.pressure = self.pressure
+        purple.backgroundColor = self.pm25.backgroundColor
+        purple.textColor = self.pm25.textColor
         
         purple.aqi = self.pm25.aqi
         purple.concern = self.pm25.concern
